@@ -1,0 +1,62 @@
+#cloud-config
+# Turns a fresh Ubuntu or Oracle Linux Arm VM (for example an Oracle Cloud
+# Always Free Ampere A1 instance) into a Detour relay in about 3 minutes.
+#
+# It builds detour-relay from source, runs it as a locked-down systemd
+# service and opens one port: UDP 47820. Detour's relay wizard passes this
+# file as the VM's user data and adds the matching ingress rule to the cloud
+# network. To run a relay by hand, paste it into any cloud's "user data" box,
+# then allow UDP 47820 in that cloud's firewall.
+
+package_update: true
+packages:
+  - gcc
+  - curl
+
+write_files:
+  - path: /etc/detour-relay.conf
+    content: |
+      listen = 0.0.0.0:47820
+      max_sessions = 64   # all clients together
+      per_client = 4      # sessions per client address
+      rate_pps = 600      # packets per second, per session
+      rate_kbps = 2000    # per session
+      idle_secs = 60      # a session closes after a minute of silence
+  - path: /etc/systemd/system/detour-relay.service
+    content: |
+      [Unit]
+      Description=Detour relay (UDP, one game server per session)
+      After=network-online.target
+      Wants=network-online.target
+
+      [Service]
+      ExecStart=/usr/local/bin/detour-relay /etc/detour-relay.conf
+      Restart=always
+      RestartSec=2
+      DynamicUser=yes
+      NoNewPrivileges=yes
+      ProtectSystem=strict
+      ProtectHome=yes
+      PrivateTmp=yes
+      RestrictAddressFamilies=AF_INET AF_INET6
+      MemoryMax=256M
+
+      [Install]
+      WantedBy=multi-user.target
+
+runcmd:
+  - |
+    set -e
+    export HOME=/root RUSTUP_HOME=/opt/rust CARGO_HOME=/opt/rust
+    curl -fsSL https://sh.rustup.rs | sh -s -- -y --profile minimal --no-modify-path
+    /opt/rust/bin/cargo install --git https://github.com/ShineFinancialStrut/game-server-route-racer.git --tag 1.1.2 detour-relay --root /usr/local
+  - |
+    if command -v firewall-cmd >/dev/null; then
+      firewall-cmd --permanent --add-port=47820/udp && firewall-cmd --reload
+    else
+      iptables -I INPUT -p udp --dport 47820 -j ACCEPT
+      ip6tables -I INPUT -p udp --dport 47820 -j ACCEPT || true
+      if command -v netfilter-persistent >/dev/null; then netfilter-persistent save; fi
+    fi
+  - systemctl daemon-reload
+  - systemctl enable --now detour-relay

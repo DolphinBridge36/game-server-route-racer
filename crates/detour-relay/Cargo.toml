@@ -1,0 +1,10 @@
+[package]
+name = "detour-relay"
+description = "A small UDP relay for Detour. Forwards one game's UDP to one server, and nothing else"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+detour-core = { path = "../detour-core" }

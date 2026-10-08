@@ -1,0 +1,99 @@
+# Community relays: volunteers' relays, by city.
+# Detour downloads this list from the repository and uses it only if the
+# signature checks out against the key built into the app. The signature
+# covers every line above the [signature] table.
+#
+# Each relay runs crates/detour-relay unchanged: UDP only, one game server per
+# session, rate-limited. To add yours, open a pull request with an entry.
+
+format = 1
+updated = 2026-10-31
+
+[[relay]]
+name = "waw-1"
+city = "Warsaw"
+country = "PL"
+addr = "198.51.100.21:47820"
+operator = "vistula-net"
+
+[[relay]]
+name = "vie-1"
+city = "Vienna"
+country = "AT"
+addr = "198.51.100.37:47820"
+operator = "donaulink"
+
+[[relay]]
+name = "fra-2"
+city = "Frankfurt"
+country = "DE"
+addr = "203.0.113.12:47820"
+operator = "mainhop"
+
+[[relay]]
+name = "ams-1"
+city = "Amsterdam"
+country = "NL"
+addr = "203.0.113.40:47820"
+operator = "grachtwerk"
+
+[[relay]]
+name = "par-1"
+city = "Paris"
+country = "FR"
+addr = "203.0.113.77:47820"
+operator = "quai-relay"
+
+[[relay]]
+name = "lon-3"
+city = "London"
+country = "GB"
+addr = "198.51.100.90:47820"
+operator = "thameside"
+
+[[relay]]
+name = "mad-1"
+city = "Madrid"
+country = "ES"
+addr = "198.51.100.114:47820"
+operator = "meseta"
+
+[[relay]]
+name = "sto-1"
+city = "Stockholm"
+country = "SE"
+addr = "192.0.2.33:47820"
+operator = "skargard"
+
+[[relay]]
+name = "ash-1"
+city = "Ashburn"
+country = "US"
+addr = "192.0.2.61:47820"
+operator = "loudoun-lan"
+
+[[relay]]
+name = "chi-1"
+city = "Chicago"
+country = "US"
+addr = "192.0.2.88:47820"
+operator = "lakeshore"
+
+[[relay]]
+name = "sao-1"
+city = "São Paulo"
+country = "BR"
+addr = "192.0.2.140:47820"
+operator = "paulista-up"
+
+[[relay]]
+name = "sin-1"
+city = "Singapore"
+country = "SG"
+addr = "192.1.1.201:47820"
+operator = "merlion-hop"
+
+[signature]
+alg = "ed25519"
+key = "OJp62qJy9tPMEr9L7EoLpeFiH4ifcUuRO87N56uEPEI="
+sig = "Q2H+jCNEpn3H31sDGq/4U94jFVTLos4KfTBdXGSxhNsMnvMjs0mB5zdBSVK9BqUSaF/wX98DzHWxFpEpt6bTDQ=="

@@ -1,0 +1,109 @@
+# Games Detour picks up on its own, by the exe that runs.
+# There are no server lists here: Detour learns each game's server from the
+# game's live UDP traffic. `short` is the two letters on the game's tile.
+# `valve = true` marks games that already ride Valve's own relay network,
+# where Detour says so instead of pretending to help.
+
+[[game]]
+name = "VALORANT"
+short = "VA"
+exe = ["VALORANT-Win64-Shipping.exe"]
+
+[[game]]
+name = "Counter-Strike 2"
+short = "CS"
+exe = ["cs2.exe"]
+valve = true
+
+[[game]]
+name = "Dota 2"
+short = "D2"
+exe = ["dota2.exe"]
+valve = true
+
+[[game]]
+name = "Deadlock"
+short = "DL"
+exe = ["deadlock.exe"]
+valve = true
+
+[[game]]
+name = "League of Legends"
+short = "LL"
+exe = ["League of Legends.exe"]
+
+[[game]]
+name = "Fortnite"
+short = "FN"
+exe = ["FortniteClient-Win64-Shipping.exe"]
+
+[[game]]
+name = "Apex Legends"
+short = "AL"
+exe = ["r5apex.exe", "r5apex_dx12.exe"] # verify: the DX12 build's name
+
+[[game]]
+name = "Call of Duty"
+short = "CD"
+exe = ["cod.exe"] # verify: each yearly release may ship its own exe
+
+[[game]]
+name = "Overwatch 2"
+short = "OW"
+exe = ["Overwatch.exe"]
+
+[[game]]
+name = "Rainbow Six Siege"
+short = "R6"
+exe = ["RainbowSix.exe", "RainbowSix_Vulkan.exe"]
+
+[[game]]
+name = "PUBG: Battlegrounds"
+short = "PB"
+exe = ["TslGame.exe"]
+
+[[game]]
+name = "Rust"
+short = "RU"
+exe = ["RustClient.exe"]
+
+[[game]]
+name = "Roblox"
+short = "RB"
+exe = ["RobloxPlayerBeta.exe"]
+
+[[game]]
+name = "Minecraft"
+short = "MC"
+exe = ["Minecraft.Windows.exe"] # Bedrock. Java edition talks TCP, which Detour doesn't route.
+
+[[game]]
+name = "GTA Online"
+short = "GT"
+exe = ["GTA5.exe", "GTA5_Enhanced.exe"]
+
+[[game]]
+name = "EA Sports FC"
+short = "FC"
+exe = ["FC26.exe", "FC27.exe"] # verify: the exe is renamed every season
+
+[[game]]
+name = "Marvel Rivals"
+short = "MR"
+exe = ["Marvel-Win64-Shipping.exe"] # verify
+
+[[game]]
+name = "Dead by Daylight"
+short = "DD"
+exe = ["DeadByDaylight-Win64-Shipping.exe", "DeadByDaylight-EGS-Shipping.exe"] # verify: the Epic build
+
+[[game]]
+name = "Rocket League"
+short = "RL"
+exe = ["RocketLeague.exe"]
+
+[[game]]
+name = "World of Warcraft"
+short = "WW"
+exe = ["Wow.exe"]
+tcp = true # WoW talks TCP: Detour measures it and gives a verdict, but routes only UDP
