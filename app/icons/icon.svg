@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 64 64">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#efede6"/></linearGradient>
+<radialGradient id="glow" cx="0.72" cy="0.72" r="0.5"><stop offset="0" stop-color="#ff5f1f" stop-opacity="0.10"/><stop offset="1" stop-color="#ff5f1f" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="1" y="1" width="62" height="62" rx="14" fill="url(#bg)"/>
+<rect x="1" y="1" width="62" height="62" rx="14" fill="url(#glow)"/>
+<rect x="1.5" y="1.5" width="61" height="61" rx="13.5" fill="none" stroke="#000" stroke-opacity="0.10"/>
+<path d="M17 47L47 17" stroke="#a5a7ad" stroke-width="3.2" stroke-dasharray="0.1 6.6" stroke-linecap="round" fill="none"/>
+<path d="M17 47H35a12 12 0 0 0 12-12V17" stroke="#ff5f1f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="17" cy="47" r="5.8" fill="#fff" stroke="#16171a" stroke-width="3.3"/>
+<circle cx="47" cy="17" r="5.8" fill="#fff" stroke="#16171a" stroke-width="3.3"/>
+</svg>
