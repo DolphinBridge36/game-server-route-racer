@@ -1,0 +1,8 @@
+# The GitHub "About" box. The Settings app (github.com/apps/settings) applies this
+# on every push; without it, copy the description and topics in by hand.
+# Upload .github/social-preview.png in Settings -> General -> Social preview.
+repository:
+  name: game-server-route-racer
+  description: "Detour times every route to your game server, puts only the game's traffic on the fastest one, and says so plainly when no route can help. Free relays: your own or the community's."
+  topics: ping, game-routing, multipath, packet-loss, wintun, networking, gaming, rust
+  has_wiki: false
