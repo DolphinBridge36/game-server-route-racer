@@ -31,12 +31,11 @@ It's free, with no account, no ads and no telemetry.
 
 | System | File | |
 |---|---|---|
-| Windows 10 and 11 | [`game-server-route-racer.zip`](https://github.com/DolphinBridge36/game-server-route-racer/releases/latest/download/game-server-route-racer.zip) | One zip. No installer, no admin rights |
+| Windows 10 and 11 | [`Detour-1.1.4-portable-x64.exe`](https://github.com/DolphinBridge36/game-server-route-racer/releases/latest/download/Detour-1.1.4-portable-x64.exe) | One zip. No installer, no admin rights |
 
-Unpack the whole folder and start `Main.exe`. No installer, no admin rights.
+Download and start the exe. No installer, no admin rights.
 
-`Main.exe` is code-signed, so Windows starts it without a warning. Keep
-`Detour` next to it: they ship together.
+The build is not code-signed yet, so SmartScreen may warn once: choose **More info**, then **Run anyway**.
 
 
 ## How to use
