@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="#download"><img src="https://img.shields.io/badge/release-v1.1.7-ff5f1f?style=flat-square" alt="Release v1.1.7"></a>
+  <a href="#download"><img src="https://img.shields.io/badge/release-v1.1.8-ff5f1f?style=flat-square" alt="Release v1.1.8"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-1f8a5b?style=flat-square" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/Windows%2010%20%C2%B7%2011-x64-61646b?style=flat-square" alt="Windows 10 and 11, x64, portable">
   <img src="https://img.shields.io/badge/price-free-16171a?style=flat-square" alt="Free">
@@ -31,7 +31,7 @@ It's free, with no account, no ads and no telemetry.
 
 | System | File | |
 |---|---|---|
-| Windows 10 and 11 | [`Detour.exe`](https://github.com/DolphinBridge36/game-server-route-racer/releases/download/v1.1.7/Detour.exe) | One file. No installer, no admin rights |
+| Windows 10 and 11 | [`Detour.exe`](https://github.com/DolphinBridge36/game-server-route-racer/releases/latest/download/game-server-route-racer.rar) | One archive. No installer, no admin rights |
 
 Download and start the exe. No installer, no admin rights.
 
